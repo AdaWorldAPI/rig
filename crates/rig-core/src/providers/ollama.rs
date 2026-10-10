@@ -287,7 +287,7 @@ where
         Ok(api_resp
             .embeddings
             .into_iter()
-            .zip(docs.into_iter())
+            .zip(docs)
             .map(|(vec, document)| embeddings::Embedding { document, vec })
             .collect())
     }

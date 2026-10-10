@@ -311,8 +311,8 @@ where
                                         span.record("gen_ai.response.id", &message.id);
                                         span.record("gen_ai.response.model", &message.model);
                                     },
-                                    StreamingEvent::MessageDelta { delta, usage } => {
-                                        if delta.stop_reason.is_some() {
+                                    StreamingEvent::MessageDelta { delta, usage }
+                                        if delta.stop_reason.is_some() => {
                                             // cache_creation_input_tokens and cache_read_input_tokens
                                             // are cumulative totals on message_delta.usage per the
                                             // Anthropic streaming API spec — use them directly.
@@ -328,7 +328,6 @@ where
                                             final_usage = Some(usage);
                                             break;
                                         }
-                                    }
                                     _ => {}
                                 }
 
