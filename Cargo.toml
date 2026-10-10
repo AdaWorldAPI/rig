@@ -87,7 +87,7 @@ httpmock = "0.8.3"
 hyper-util = "0.1.14"
 indexmap = "2.14.0"
 indoc = "2.0.6"
-lancedb = { version = "0.30", default-features = false }
+lancedb = { version = "0.40", default-features = false, features = ["remote"] }
 log = "0.4.27"
 lopdf = "0.41.0"
 mime = "0.3.17"

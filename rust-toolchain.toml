@@ -1,8 +1,9 @@
-# Pinned to 1.95.0 (from 1.91.0) so rig-surrealdb can build against the
-# AdaWorldAPI surrealdb (kv-lance) fork, whose transitive ndarray fork
-# requires Rust 1.95. Forked repos in this workspace pin to 1.95.
+# Pinned to 1.99.0 (from 1.95.0) with the AdaWorldAPI ecosystem-wide Rust 1.99
+# sweep (lance 13 / lancedb 0.40). Earlier pin 1.95.0 (from 1.91.0) was so
+# rig-surrealdb could build against the AdaWorldAPI surrealdb (kv-lance) fork,
+# whose transitive ndarray fork required Rust 1.95; 1.99 still satisfies it.
 [toolchain]
-channel = "1.95.0"
+channel = "1.99.0"
 profile = "default"
 components = [ "rust-analyzer", "rust-src" ]
 targets = [ "wasm32-unknown-unknown" ]
